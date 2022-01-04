@@ -9,7 +9,6 @@ function updateTime(){
 updateTime();
 setInterval(updateTime, 3000);
 
-// open app
 function openApp(e){
   if(folderOpened==1) return;
     var app = e.currentTarget;
@@ -30,10 +29,6 @@ function openApp(e){
     document.querySelector(".app-container-wrap").classList.add("app-"+className);
 }
 
-// document.querySelector(".app-container-body").innerHTML = document.querySelector(".app-11").innerHTML;
-// document.querySelector(".app-container-wrap").classList.add("app-11");
-
-// add on app onclicksv
 var appSeparate =document.getElementsByClassName('app');
 for (var i = 0; i < appSeparate.length; i++) {
   appSeparate[i].setAttribute("data-app",i+1);
@@ -47,7 +42,7 @@ for (var i = 0; i < appSeparate.length; i++) {
 function closeFolder(){
     document.getElementsByClassName("folder")[0].children[2].style.opacity=1;
     document.getElementById("folderClicked").style.opacity = 0;
-    //animation
+
     window.setTimeout(function(){
       document.getElementById("folderClicked").style.display = "none";
       let apps = document.getElementsByClassName('apps')[0];
@@ -70,24 +65,20 @@ document.getElementsByClassName('folder')[0].addEventListener('click',function(e
 
   folder.children[2].style.opacity=0;
     folderOpened=1;
-  // to alter the design
 
   document.body.setAttribute('id','blurredBody');
 
   document.documentElement.style.setProperty('--folder-name', 'inline-block');
 
-  // let apps = document.getElementsByClassName('apps')[0];
-  // apps.style.display = 'flex';
   var appSeparate =document.getElementsByClassName('app');
   for (var i = 0; i < appSeparate.length; i++) {
     appSeparate[i].style.filter = "blur(2px)";
   }
   document.getElementById("folderClicked").style.display = "block";
-  //animation
+
   window.setTimeout(function(){
    document.getElementById("folderClicked").style.opacity = 1;
   },0);
-  // folder.querySelector('.folder_icon').style.width="none"
 })
 
 document.onclick = function(e){
@@ -97,7 +88,6 @@ document.onclick = function(e){
     }
 }
 
-//close app
 document.querySelector(".close-app").addEventListener("click",function(e){
     document.body.offsetWidth;
     document.body.classList.remove("app-open");
