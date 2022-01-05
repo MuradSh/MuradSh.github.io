@@ -2,4 +2,5 @@
     _::-webkit-full-page-media, _:future, :root .safari_only {
         padding-bottom: 135px;
     }
+    body{background: red;}
 }
