@@ -87,14 +87,14 @@ document.onclick = function(e){
       closeFolder();
     }
 }
-
-document.querySelector(".close-app").addEventListener("click",function(e){
+function closeApp(e){
     document.body.offsetWidth;
     document.body.classList.remove("app-open");
     document.querySelector(".app-container").style.transform = "translate3d(0,0,0) scale(0)";
     document.querySelector(".app-container-body").innerHTML = "";
     document.querySelector(".app-container-wrap").className = "app-container-wrap";
-})
+}
+// document.querySelector(".close-app").addEventListener("click",)
 
 function openProj(e){
   if(!e) e = window.event;
