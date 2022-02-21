@@ -54,7 +54,8 @@ function closeFolder(){
 
     document.documentElement.style.setProperty('--folder-name', 'none');
 
-    var appSeparate =document.getElementsByClassName('app');
+    var appSeparate = document.getElementsByClassName('app');
+    document.getElementsByClassName('folder')[0].style.filter = "blur(0px)";
     for (var i = 0; i < appSeparate.length; i++) {
       appSeparate[i].style.filter = "blur(0px)";
     }
